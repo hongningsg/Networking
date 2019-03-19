@@ -1,0 +1,28 @@
+swagger: '2.0'
+basePath: /v1
+info:
+  version: 0.0.1
+  title: Chatbot
+  description: Chatbot with rivescript
+paths:
+  /chat:
+    post:
+      summary: Chat with chatbot
+      consumes: 
+        - application/json
+      parameters: 
+        - in: body
+          name: chat
+          description: communicate with chatbot
+          schema:
+            type: object
+            required: 
+              - message
+            properties:
+              message:
+                type: string
+      tags: 
+        - Communication
+      responses:
+        200:
+          description: OK
