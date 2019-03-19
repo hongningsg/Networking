@@ -1,0 +1,40 @@
+swagger: '2.0'
+basePath: /v1
+info:
+  version: 0.0.1
+  title: Dentist Reservation
+  description: Book an appointment with a dentist
+paths:
+  /timeslots:
+    get:
+      summary: Gets the available time slots
+      tags: 
+        - Appointments
+      responses:
+        200:
+          description: OK
+    post:
+      summary: Create a timeslot
+      parameters: 
+        - in: query
+          name: body
+          type: string
+          required: true
+      tags: 
+        - Appointments
+      responses:
+        200:
+          description: OK
+  /timeslots/{id}/reserve:
+    get:
+      summary: Book an appointment
+      parameters: 
+        - name: id
+          in: path
+          required: true
+          type: integer
+      tags: 
+        - Appointments
+      responses:
+        200:
+          description: OK

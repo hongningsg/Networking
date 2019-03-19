@@ -1,0 +1,7 @@
+Flask
+Jinja2
+Flask-RESTful
+jsonschema == 2.6.0
+click<7
+six
+swagger_py_codegen
